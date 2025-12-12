@@ -1,0 +1,250 @@
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(227, 30, 36, 0.3) 0%, rgba(10, 10, 10, 0.8) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-gray);
+}
+
+.contact-section {
+    background: var(--dark-secondary);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-item-icon img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.contact-item-text h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-item-text p {
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.contact-form {
+    background: var(--dark-bg);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    background: var(--dark-secondary);
+    border: 2px solid var(--dark-tertiary);
+    border-radius: 5px;
+    color: var(--text-white);
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-red);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--dark-secondary);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-red);
+    box-shadow: 0 10px 30px rgba(227, 30, 36, 0.3);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(227, 30, 36, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: var(--primary-red);
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.service-card p {
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.stats-section {
+    background: var(--dark-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(227, 30, 36, 0.1) 0%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 26px;
+    }
+}
